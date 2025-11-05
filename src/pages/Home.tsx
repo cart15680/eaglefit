@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import { services, projects } from "@/lib/data";
-import teamMembers from "@/assets/team-members.png";
+import redaImage from "@/assets/reda.jpg";
+import mohammedImage from "@/assets/md.jpg";
 
 const Home = () => {
   return (
@@ -165,23 +166,57 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold mb-4 glow-text">Our Leadership Team</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet the experts driving excellence in MEP and decoration services
+              Meet the visionary leaders driving excellence in MEP and decoration services
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="max-w-5xl mx-auto"
-          >
-            <img 
-              src={teamMembers} 
-              alt="Eagle Fit Leadership Team" 
-              className="w-full rounded-2xl shadow-2xl hover-glow"
-            />
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass rounded-2xl overflow-hidden hover-glow"
+            >
+              <div className="aspect-[3/4] overflow-hidden">
+                <img 
+                  src={mohammedImage} 
+                  alt="Eng Mohammed Elrefaey - Managing Director" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2">Eng Mohammed Elrefaey</h3>
+                <p className="text-primary font-semibold mb-3">Managing Director</p>
+                <p className="text-muted-foreground text-sm">
+                  Leading Eagle Fit Decorations with strategic vision and decades of MEP expertise
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="glass rounded-2xl overflow-hidden hover-glow"
+            >
+              <div className="aspect-[3/4] overflow-hidden">
+                <img 
+                  src={redaImage} 
+                  alt="Eng Reda Elmaghraby - Financial Manager" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2">Eng Reda Elmaghraby</h3>
+                <p className="text-primary font-semibold mb-3">Financial Manager</p>
+                <p className="text-muted-foreground text-sm">
+                  Ensuring financial excellence and strategic growth for sustainable operations
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -144,7 +144,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                    <p className="text-muted-foreground mb-1">+971 XX XXX XXXX</p>
+                    <a href="tel:+971XXXXXXXXX" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
+                      +971 XX XXX XXXX
+                    </a>
                     <p className="text-muted-foreground">Available 24/7</p>
                   </div>
                 </div>
@@ -159,7 +161,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                    <p className="text-muted-foreground mb-1">info@eaglefitdecorations.com</p>
+                    <a href="mailto:info@eaglefitdecorations.com" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
+                      info@eaglefitdecorations.com
+                    </a>
                     <p className="text-muted-foreground">We'll respond within 24 hours</p>
                   </div>
                 </div>

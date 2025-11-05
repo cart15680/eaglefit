@@ -57,7 +57,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-primary">Contact</h4>
             <ul className="space-y-3">
@@ -67,11 +67,15 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+971 XX XXX XXXX</span>
+                <a href="tel:+971XXXXXXXXX" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  +971 XX XXX XXXX
+                </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">info@eaglefitdecorations.com</span>
+                <a href="mailto:info@eaglefitdecorations.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  info@eaglefitdecorations.com
+                </a>
               </li>
             </ul>
           </div>

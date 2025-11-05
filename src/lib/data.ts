@@ -204,6 +204,32 @@ export const blogPosts = [
 ];
 
 export const galleryItems = [
+  // Featured Videos (3 mandatory)
+  {
+    id: "video-1",
+    title: "Modern Living Room Design Walkthrough",
+    category: "Interior",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    type: "video"
+  },
+  {
+    id: "video-2",
+    title: "Luxury Villa Renovation Project",
+    category: "Renovation",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    type: "video"
+  },
+  {
+    id: "video-3",
+    title: "Commercial Office Transformation",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    type: "video"
+  },
+  // Images
   {
     id: "gallery-1",
     title: "Modern Living Room",
@@ -244,6 +270,132 @@ export const galleryItems = [
     title: "Swimming Pool",
     category: "Outdoor",
     image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-7",
+    title: "Contemporary Kitchen",
+    category: "Interior",
+    image: "https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-8",
+    title: "Master Bedroom",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-9",
+    title: "Office Reception",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-10",
+    title: "Outdoor Patio",
+    category: "Outdoor",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-11",
+    title: "Bathroom Renovation",
+    category: "Renovation",
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-12",
+    title: "Living Room Interior",
+    category: "Interior",
+    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-13",
+    title: "Commercial Showroom",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-14",
+    title: "Villa Exterior",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-15",
+    title: "Garden Landscaping",
+    category: "Outdoor",
+    image: "https://images.unsplash.com/photo-1597655601841-214a4cfe8b2c?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-16",
+    title: "Modern Dining Room",
+    category: "Interior",
+    image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-17",
+    title: "Penthouse Renovation",
+    category: "Renovation",
+    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-18",
+    title: "Corporate Office",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-19",
+    title: "Family Room",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-20",
+    title: "Rooftop Terrace",
+    category: "Outdoor",
+    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-21",
+    title: "Elegant Foyer",
+    category: "Interior",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-22",
+    title: "Kitchen Remodel",
+    category: "Renovation",
+    image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-23",
+    title: "Retail Store",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80",
+    type: "image"
+  },
+  {
+    id: "gallery-24",
+    title: "Children's Bedroom",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
     type: "image"
   }
 ];

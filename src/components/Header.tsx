@@ -65,13 +65,17 @@ const Header = () => {
 
             {/* Contact Buttons */}
             <div className="hidden lg:flex items-center space-x-2">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Phone className="w-4 h-4" />
-                <span>Call Us</span>
+              <Button variant="outline" size="sm" className="gap-2" asChild>
+                <a href="tel:+971XXXXXXXXX">
+                  <Phone className="w-4 h-4" />
+                  <span>Call Us</span>
+                </a>
               </Button>
-              <Button size="sm" className="gap-2 bg-gradient-to-r from-primary to-accent">
-                <Mail className="w-4 h-4" />
-                <span>Get Quote</span>
+              <Button size="sm" className="gap-2 bg-gradient-to-r from-primary to-accent" asChild>
+                <a href="mailto:info@eaglefitdecorations.com">
+                  <Mail className="w-4 h-4" />
+                  <span>Get Quote</span>
+                </a>
               </Button>
             </div>
 
@@ -112,13 +116,17 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="outline" className="w-full gap-2">
-                  <Phone className="w-4 h-4" />
-                  Call Us
+                <Button variant="outline" className="w-full gap-2" asChild>
+                  <a href="tel:+971XXXXXXXXX">
+                    <Phone className="w-4 h-4" />
+                    Call Us
+                  </a>
                 </Button>
-                <Button className="w-full gap-2 bg-gradient-to-r from-primary to-accent">
-                  <Mail className="w-4 h-4" />
-                  Get Quote
+                <Button className="w-full gap-2 bg-gradient-to-r from-primary to-accent" asChild>
+                  <a href="mailto:info@eaglefitdecorations.com">
+                    <Mail className="w-4 h-4" />
+                    Get Quote
+                  </a>
                 </Button>
               </div>
             </nav>
