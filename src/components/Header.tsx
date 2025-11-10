@@ -66,7 +66,7 @@ const Header = () => {
             {/* Contact Buttons */}
             <div className="hidden lg:flex items-center space-x-2">
               <Button variant="outline" size="sm" className="gap-2" asChild>
-                <a href="tel:+971XXXXXXXXX">
+                <a href="tel:+971551753322">
                   <Phone className="w-4 h-4" />
                   <span>Call Us</span>
                 </a>
@@ -117,7 +117,7 @@ const Header = () => {
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="outline" className="w-full gap-2" asChild>
-                  <a href="tel:+971XXXXXXXXX">
+                  <a href="tel:+971551753322">
                     <Phone className="w-4 h-4" />
                     Call Us
                   </a>

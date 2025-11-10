@@ -144,8 +144,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                    <a href="tel:+971XXXXXXXXX" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
-                      +971 XX XXX XXXX
+                    <a href="tel:+971551753322" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
+                      +971 55 175 3322
                     </a>
                     <p className="text-muted-foreground">Available 24/7</p>
                   </div>
@@ -178,9 +178,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Working Hours</h3>
-                    <p className="text-muted-foreground mb-1">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p className="text-muted-foreground mb-1">Saturday: 9:00 AM - 4:00 PM</p>
-                    <p className="text-muted-foreground">Sunday: Emergency Services Only</p>
+                    <p className="text-muted-foreground text-lg font-semibold">24 x 7</p>
+                    <p className="text-muted-foreground">Available All Days, Anytime</p>
                   </div>
                 </div>
               </CardContent>

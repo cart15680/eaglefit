@@ -220,6 +220,84 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4 glow-text">What Our Clients Say</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Don't just take our word for it - hear from our satisfied clients
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Ahmed Al Mansouri",
+                role: "Villa Owner, Dubai Hills",
+                rating: 5,
+                testimonial: "Eagle Fit transformed our villa with their exceptional MEP services. The AC installation was flawless, and their team was professional throughout. Highly recommended!"
+              },
+              {
+                name: "Sarah Johnson",
+                role: "Restaurant Manager, JBR",
+                rating: 5,
+                testimonial: "We needed complete electrical work for our new restaurant. Eagle Fit delivered on time and within budget. Their attention to detail is impressive!"
+              },
+              {
+                name: "Mohammed Hassan",
+                role: "Property Developer, Downtown",
+                rating: 5,
+                testimonial: "Working with Eagle Fit on multiple projects has been a pleasure. Their carpentry and painting services are top-notch. True professionals!"
+              },
+              {
+                name: "Lisa Anderson",
+                role: "Homeowner, Palm Jumeirah",
+                rating: 5,
+                testimonial: "The wood flooring installation exceeded our expectations. Beautiful craftsmanship and excellent customer service. Worth every dirham!"
+              },
+              {
+                name: "Khalid Al Hamadi",
+                role: "Office Manager, Business Bay",
+                rating: 5,
+                testimonial: "Eagle Fit handles all our building maintenance needs. Their 24/7 availability and quick response time give us peace of mind."
+              },
+              {
+                name: "Emily Roberts",
+                role: "Boutique Owner, Dubai Mall",
+                rating: 5,
+                testimonial: "From painting to electrical work, Eagle Fit did it all for our boutique renovation. Professional, reliable, and excellent quality!"
+              }
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass p-6 rounded-xl hover-glow"
+              >
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, index) => (
+                    <Star key={index} className="w-5 h-5 fill-secondary text-secondary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">"{testimonial.testimonial}"</p>
+                <div className="border-t border-border/50 pt-4">
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20 glass">
         <div className="container mx-auto px-4">
@@ -299,7 +377,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Button size="lg" variant="outline">
-                Call +971 XX XXX XXXX
+                Call +971 55 175 3322
               </Button>
             </div>
           </motion.div>

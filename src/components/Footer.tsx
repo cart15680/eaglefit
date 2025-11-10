@@ -49,11 +49,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-primary">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">Air Conditioning</li>
-              <li className="text-muted-foreground">Carpentry & Wood Flooring</li>
-              <li className="text-muted-foreground">Painting & Decoration</li>
-              <li className="text-muted-foreground">Electrical Services</li>
-              <li className="text-muted-foreground">Building Maintenance</li>
+              <li><Link to="/services/air-conditioning" className="text-muted-foreground hover:text-primary transition-colors">Air Conditioning</Link></li>
+              <li><Link to="/services/carpentry" className="text-muted-foreground hover:text-primary transition-colors">Carpentry & Wood Flooring</Link></li>
+              <li><Link to="/services/painting" className="text-muted-foreground hover:text-primary transition-colors">Painting & Decoration</Link></li>
+              <li><Link to="/services/electrical" className="text-muted-foreground hover:text-primary transition-colors">Electrical Services</Link></li>
+              <li><Link to="/services/maintenance" className="text-muted-foreground hover:text-primary transition-colors">Building Maintenance</Link></li>
             </ul>
           </div>
 
@@ -67,8 +67,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+971XXXXXXXXX" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +971 XX XXX XXXX
+                <a href="tel:+971551753322" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  +971 55 175 3322
                 </a>
               </li>
               <li className="flex items-center space-x-2">

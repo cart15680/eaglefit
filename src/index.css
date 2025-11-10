@@ -107,6 +107,28 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-image: url('/src/assets/construction-bg.png');
+    background-size: 400px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--background) / 0.80);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  #root {
+    position: relative;
+    z-index: 1;
   }
 
   .glass {
