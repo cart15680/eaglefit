@@ -6,6 +6,60 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 192 100% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 192 100% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 192 100% 10%;
+
+    --primary: 186 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 100% 55%;
+    --secondary-foreground: 192 100% 10%;
+
+    --muted: 192 20% 95%;
+    --muted-foreground: 192 20% 40%;
+
+    --accent: 186 100% 55%;
+    --accent-foreground: 192 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 192 30% 85%;
+    --input: 192 30% 90%;
+    --ring: 186 100% 45%;
+
+    --radius: 1rem;
+
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(186 100% 35%), hsl(186 100% 55%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 100% 45%), hsl(43 100% 65%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(192 20% 95%));
+    
+    /* Glassmorphism */
+    --glass-bg: hsla(0, 0%, 100%, 0.7);
+    --glass-border: hsla(186, 100%, 45%, 0.2);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsla(186, 100%, 45%, 0.2);
+    --shadow-luxury: 0 20px 60px hsla(0, 0%, 0%, 0.1);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 192 100% 10%;
+    --sidebar-primary: 186 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 192 20% 95%;
+    --sidebar-accent-foreground: 192 100% 10%;
+    --sidebar-border: 192 30% 85%;
+    --sidebar-ring: 186 100% 45%;
+  }
+
+  .dark {
     --background: 192 100% 5%;
     --foreground: 180 100% 98%;
 
@@ -33,22 +87,10 @@
     --border: 192 50% 20%;
     --input: 192 50% 15%;
     --ring: 186 100% 45%;
-
-    --radius: 1rem;
-
-    /* Luxury gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(186 100% 35%), hsl(186 100% 55%));
-    --gradient-gold: linear-gradient(135deg, hsl(43 100% 45%), hsl(43 100% 65%));
-    --gradient-dark: linear-gradient(180deg, hsl(192 100% 5%), hsl(192 95% 8%));
     
-    /* Glassmorphism */
+    /* Glassmorphism for dark mode */
     --glass-bg: hsla(192, 95%, 8%, 0.75);
-    --glass-border: hsla(186, 100%, 45%, 0.2);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsla(186, 100%, 45%, 0.3);
-    --shadow-luxury: 0 20px 60px hsla(0, 0%, 0%, 0.5);
-
     --sidebar-background: 192 95% 8%;
     --sidebar-foreground: 180 100% 98%;
     --sidebar-primary: 186 100% 45%;
@@ -57,45 +99,6 @@
     --sidebar-accent-foreground: 180 100% 98%;
     --sidebar-border: 192 50% 20%;
     --sidebar-ring: 186 100% 45%;
-  }
-
-  .dark {
-    --background: 192 100% 3%;
-    --foreground: 180 100% 98%;
-
-    --card: 192 95% 6%;
-    --card-foreground: 180 100% 98%;
-
-    --popover: 192 95% 6%;
-    --popover-foreground: 180 100% 98%;
-
-    --primary: 186 100% 50%;
-    --primary-foreground: 192 100% 3%;
-
-    --secondary: 43 100% 60%;
-    --secondary-foreground: 192 100% 3%;
-
-    --muted: 192 50% 12%;
-    --muted-foreground: 180 30% 70%;
-
-    --accent: 186 100% 60%;
-    --accent-foreground: 192 100% 3%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 192 50% 15%;
-    --input: 192 50% 12%;
-    --ring: 186 100% 50%;
-    
-    --sidebar-background: 192 95% 6%;
-    --sidebar-foreground: 180 100% 98%;
-    --sidebar-primary: 186 100% 50%;
-    --sidebar-primary-foreground: 192 100% 3%;
-    --sidebar-accent: 192 50% 12%;
-    --sidebar-accent-foreground: 180 100% 98%;
-    --sidebar-border: 192 50% 15%;
-    --sidebar-ring: 186 100% 50%;
   }
 }
 
