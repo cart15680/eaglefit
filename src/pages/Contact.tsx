@@ -6,11 +6,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
+import { useState } from "react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Thank you! We'll get back to you soon.");
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const mailtoLink = `mailto:sumonforwork007@gmail.com?subject=Service Request: ${formData.get("service")}&body=Name: ${formData.get("name")}%0D%0AEmail: ${formData.get("email")}%0D%0APhone: ${formData.get("phone")}%0D%0AService: ${formData.get("service")}%0D%0A%0D%0AMessage:%0D%0A${formData.get("message")}`;
+    
+    window.location.href = mailtoLink;
+    toast.success("Opening your email client...");
+    setIsSubmitting(false);
+    e.currentTarget.reset();
   };
 
   return (
@@ -44,6 +55,7 @@ const Contact = () => {
                       <Label htmlFor="name">Full Name</Label>
                       <Input
                         id="name"
+                        name="name"
                         placeholder="John Doe"
                         required
                         className="glass"
@@ -53,6 +65,7 @@ const Contact = () => {
                       <Label htmlFor="email">Email</Label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="john@example.com"
                         required
@@ -61,11 +74,11 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
                       <Input
                         id="phone"
+                        name="phone"
                         type="tel"
                         placeholder="+971 XX XXX XXXX"
                         required
@@ -76,24 +89,30 @@ const Contact = () => {
                       <Label htmlFor="service">Service Interested</Label>
                       <select
                         id="service"
+                        name="service"
                         className="w-full h-10 rounded-lg glass px-3 py-2 text-sm"
                         required
                       >
                         <option value="">Select a service</option>
-                        <option>Air Conditioning</option>
-                        <option>Carpentry & Wood Flooring</option>
-                        <option>Sanitary Installation</option>
+                        <option>Air Conditioning Services</option>
+                        <option>Carpentry & Wood Flooring Works</option>
+                        <option>Sanitary Installation & Pipe Repairing</option>
                         <option>Painting Contracting</option>
-                        <option>Electrical Services</option>
-                        <option>Other</option>
+                        <option>Wallpaper Fixing Works</option>
+                        <option>Electrical Fitting & Fixture Repairing & Maintenance</option>
+                        <option>Plaster Works</option>
+                        <option>False Ceiling & Light Partition Installation</option>
+                        <option>Swimming Pool Installation Works</option>
+                        <option>Building Maintenance</option>
+                        <option>Decoration Design & Implementation</option>
                       </select>
                     </div>
-                  </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Tell us about your project..."
                       rows={5}
                       required
@@ -104,9 +123,10 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-primary to-accent"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
@@ -147,7 +167,10 @@ const Contact = () => {
                     <a href="tel:+971551753322" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
                       +971 55 175 3322
                     </a>
-                    <p className="text-muted-foreground">Available 24/7</p>
+                    <a href="tel:+971568158826" className="text-muted-foreground hover:text-primary transition-colors block mb-1">
+                      +971 56 815 8826
+                    </a>
+                    <p className="text-muted-foreground">Available 24 x 7</p>
                   </div>
                 </div>
               </CardContent>

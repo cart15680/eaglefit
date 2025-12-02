@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
+import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,14 +21,16 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const { t } = useTranslation();
+
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/portfolio", label: "Portfolio" },
-    { path: "/gallery", label: "Gallery" },
-    { path: "/blog", label: "Blog" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: t('home') },
+    { path: "/about", label: t('about') },
+    { path: "/services", label: t('services') },
+    { path: "/portfolio", label: t('portfolio') },
+    { path: "/gallery", label: t('gallery') },
+    { path: "/blog", label: t('blog') },
+    { path: "/contact", label: t('contact') },
   ];
 
   return (
@@ -65,16 +70,24 @@ const Header = () => {
 
             {/* Contact Buttons */}
             <div className="hidden lg:flex items-center space-x-2">
+              <LanguageSwitcher />
+              <ThemeSwitcher />
               <Button variant="outline" size="sm" className="gap-2" asChild>
                 <a href="tel:+971551753322">
                   <Phone className="w-4 h-4" />
-                  <span>Call Us</span>
+                  <span>+971 55 175 3322</span>
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" className="gap-2" asChild>
+                <a href="tel:+971568158826">
+                  <Phone className="w-4 h-4" />
+                  <span>+971 56 815 8826</span>
                 </a>
               </Button>
               <Button size="sm" className="gap-2 bg-gradient-to-r from-primary to-accent" asChild>
                 <a href="mailto:info@eaglefitdecorations.com">
                   <Mail className="w-4 h-4" />
-                  <span>Get Quote</span>
+                  <span>{t('contact.getQuote')}</span>
                 </a>
               </Button>
             </div>
@@ -119,15 +132,25 @@ const Header = () => {
                 <Button variant="outline" className="w-full gap-2" asChild>
                   <a href="tel:+971551753322">
                     <Phone className="w-4 h-4" />
-                    Call Us
+                    +971 55 175 3322
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full gap-2" asChild>
+                  <a href="tel:+971568158826">
+                    <Phone className="w-4 h-4" />
+                    +971 56 815 8826
                   </a>
                 </Button>
                 <Button className="w-full gap-2 bg-gradient-to-r from-primary to-accent" asChild>
                   <a href="mailto:info@eaglefitdecorations.com">
                     <Mail className="w-4 h-4" />
-                    Get Quote
+                    {t('contact.getQuote')}
                   </a>
                 </Button>
+                <div className="flex gap-2 pt-2">
+                  <LanguageSwitcher />
+                  <ThemeSwitcher />
+                </div>
               </div>
             </nav>
           </motion.div>
